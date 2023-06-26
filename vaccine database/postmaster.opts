@@ -1,0 +1,1 @@
+/Applications/Postgres.app/Contents/Versions/16/bin/postgres "-D" "/Users/nmekonnen/Downloads/site-week4-lab2-vaccine-hub-starter/vaccine database" "-p" "5432"

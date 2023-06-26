@@ -1,0 +1,68 @@
+2023-06-26 16:01:00.764 PDT [2711] LOG:  starting PostgreSQL 16beta1 on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit
+2023-06-26 16:01:00.766 PDT [2711] LOG:  listening on IPv6 address "::1", port 5432
+2023-06-26 16:01:00.766 PDT [2711] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-06-26 16:01:00.767 PDT [2711] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-06-26 16:01:00.771 PDT [2714] LOG:  database system was shut down at 2023-06-26 16:01:00 PDT
+2023-06-26 16:01:00.775 PDT [2711] LOG:  database system is ready to accept connections
+2023-06-26 16:04:37.204 PDT [10706] LOG:  invalid length of startup packet
+2023-06-26 16:04:38.357 PDT [10867] LOG:  invalid length of startup packet
+2023-06-26 16:04:41.939 PDT [11259] LOG:  invalid length of startup packet
+2023-06-26 16:05:10.735 PDT [13294] ERROR:  syntax error at or near "{" at character 19
+2023-06-26 16:05:10.735 PDT [13294] STATEMENT:  CREATE TABLE users{
+	    id SERIAL PRIMARY KEY,
+	    password TEXT NOT NULL,
+	    email TEXT NOT NULL UNIQUE CHECK(POSITION('@' IN email) > 1),
+	    rsvp_status BOOLEAN NOT NULL,
+	    patients INTEGER NOT NULL,
+	    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+	}
+2023-06-26 16:06:00.780 PDT [2712] LOG:  checkpoint starting: time
+2023-06-26 16:06:12.403 PDT [13502] ERROR:  database "vaccine_registration" does not exist
+2023-06-26 16:06:12.403 PDT [13502] STATEMENT:  DROP DATABASE vaccine_registration;
+2023-06-26 16:06:12.620 PDT [13520] ERROR:  syntax error at or near "{" at character 19
+2023-06-26 16:06:12.620 PDT [13520] STATEMENT:  CREATE TABLE users{
+	    id SERIAL PRIMARY KEY,
+	    password TEXT NOT NULL,
+	    email TEXT NOT NULL UNIQUE CHECK(POSITION('@' IN email) > 1),
+	    rsvp_status BOOLEAN NOT NULL,
+	    patients INTEGER NOT NULL,
+	    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+	}
+2023-06-26 16:07:39.361 PDT [2712] LOG:  checkpoint complete: wrote 983 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=98.562 s, sync=0.016 s, total=98.581 s; sync files=266, longest=0.001 s, average=0.001 s; distance=4634 kB, estimate=4634 kB; lsn=0/2009678, redo lsn=0/1BD0530
+2023-06-26 16:08:12.853 PDT [2712] LOG:  checkpoint starting: immediate force wait
+2023-06-26 16:08:12.858 PDT [2712] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.002 s, sync=0.001 s, total=0.005 s; sync files=3, longest=0.001 s, average=0.001 s; distance=4324 kB, estimate=4603 kB; lsn=0/2009808, redo lsn=0/20097D0
+2023-06-26 16:08:13.066 PDT [13650] ERROR:  syntax error at or near "{" at character 20
+2023-06-26 16:08:13.066 PDT [13650] STATEMENT:  CREATE TABLE users {
+	    id SERIAL PRIMARY KEY,
+	    password TEXT NOT NULL,
+	    email TEXT NOT NULL UNIQUE CHECK(POSITION('@' IN email) > 1),
+	    rsvp_status BOOLEAN NOT NULL,
+	    patients INTEGER NOT NULL,
+	    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+	};
+2023-06-26 16:08:37.534 PDT [2712] LOG:  checkpoint starting: immediate force wait
+2023-06-26 16:08:37.540 PDT [2712] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.006 s; sync files=7, longest=0.001 s, average=0.001 s; distance=4325 kB, estimate=4575 kB; lsn=0/2442C28, redo lsn=0/2442BF0
+2023-06-26 16:10:07.513 PDT [13845] FATAL:  database "vaccine-registration" does not exist
+2023-06-26 16:11:51.420 PDT [14127] FATAL:  database "vaccination-registration" does not exist
+2023-06-26 16:12:08.140 PDT [14146] FATAL:  database "vaccinen-registration" does not exist
+2023-06-26 16:12:14.850 PDT [14150] FATAL:  database "vaccinen-registration" does not exist
+2023-06-26 16:12:27.974 PDT [14176] FATAL:  database "vaccine-registration" does not exist
+2023-06-26 16:13:10.627 PDT [14243] FATAL:  role "registration" does not exist
+2023-06-26 16:13:25.076 PDT [14266] FATAL:  role "registration.sql" does not exist
+2023-06-26 16:13:37.551 PDT [2712] LOG:  checkpoint starting: time
+2023-06-26 16:15:07.408 PDT [2712] LOG:  checkpoint complete: wrote 893 buffers (5.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=89.852 s, sync=0.001 s, total=89.858 s; sync files=7, longest=0.001 s, average=0.001 s; distance=4351 kB, estimate=4553 kB; lsn=0/2883358, redo lsn=0/2882B48
+2023-06-26 16:15:07.414 PDT [2712] LOG:  checkpoint starting: immediate force wait
+2023-06-26 16:15:07.418 PDT [2712] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.005 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=4098 kB; lsn=0/2883408, redo lsn=0/28833D0
+2023-06-26 16:16:58.130 PDT [14517] ERROR:  syntax error at or near "SELECT" at character 21
+2023-06-26 16:16:58.130 PDT [14517] STATEMENT:  SELECT * FROM users
+	SELECT * FROM users;
+2023-06-26 16:20:07.429 PDT [2712] LOG:  checkpoint starting: time
+2023-06-26 16:21:42.925 PDT [2712] LOG:  checkpoint complete: wrote 949 buffers (5.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=95.487 s, sync=0.004 s, total=95.496 s; sync files=255, longest=0.001 s, average=0.001 s; distance=4352 kB, estimate=4352 kB; lsn=0/2CC36B8, redo lsn=0/2CC3680
+2023-06-26 16:22:56.835 PDT [2712] LOG:  checkpoint starting: immediate force wait
+2023-06-26 16:22:56.840 PDT [2712] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.006 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=3917 kB; lsn=0/2CC40F0, redo lsn=0/2CC40B8
+2023-06-26 16:24:20.912 PDT [15683] ERROR:  syntax error at or near "d" at character 1
+2023-06-26 16:24:20.912 PDT [15683] STATEMENT:  d
+	SELECT * FROM users
+	SELECT * FROM users;
+2023-06-26 16:27:56.849 PDT [2712] LOG:  checkpoint starting: time
+2023-06-26 16:29:32.127 PDT [2712] LOG:  checkpoint complete: wrote 949 buffers (5.8%); 0 WAL file(s) added, 0 removed, 1 recycled; write=95.265 s, sync=0.010 s, total=95.278 s; sync files=255, longest=0.001 s, average=0.001 s; distance=4353 kB, estimate=4353 kB; lsn=0/31046D0, redo lsn=0/3104698
