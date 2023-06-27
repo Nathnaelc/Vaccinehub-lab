@@ -15,7 +15,7 @@ function getDatabaseUrl() {
   const dbName = process.env.DATABASE_NAME || "vaccine_registration";
   return (
     process.env.DATABASE_URL ||
-    `postgres://${dbUser}:${dbPassword}@${dbHost}:${dbPort}/${dbName}`
+    `postgresql://${dbUser}:${dbPassword}@${dbHost}:${dbPort}/${dbName}`
   );
 }
 

@@ -3,6 +3,7 @@ const cors = require("cors");
 const DEBUG = require("debug");
 const morgan = require("morgan");
 const { BadRequestError, NotFoundError } = require("./utils/errors");
+const authRoutes = require("./routes/auth");
 
 const { PORT } = require("./config");
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
+app.use("/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.send("It works!");

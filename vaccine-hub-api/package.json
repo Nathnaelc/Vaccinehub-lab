@@ -4,7 +4,7 @@
   "description": "vaccine hub back end",
   "main": "server.js",
   "scripts": {
-    "start": "DEBUG=app nodemon app.js",
+    "start": "DEBUG=app nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nathe",
