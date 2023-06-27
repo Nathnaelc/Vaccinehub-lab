@@ -19,11 +19,14 @@ function getDatabaseUrl() {
   );
 }
 
+const BYCRYPT_WORK_FACTOR = 13;
+
 console.log("wedding Registration Config:".green, getDatabaseUrl());
 console.log("wedding Registration Port:".blue, PORT);
 console.log("DatabaseURL:", getDatabaseUrl());
 
 module.exports = {
   PORT,
+  BYCRYPT_WORK_FACTOR,
   getDatabaseUrl,
 };

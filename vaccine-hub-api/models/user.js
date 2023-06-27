@@ -1,5 +1,7 @@
 const { BadRequestError, UnathorizedError } = require("../utils/errors");
 const db = require("../db");
+const { BYCRYPT_WORK_FACTOR } = require("../config");
+const bycrypt = require("bcrypt");
 
 class User {
   static async login(credentials) {
@@ -14,7 +16,7 @@ class User {
   static async register(credentials) {
     // submit their email and password
     // if fields are missing, throw an error
-    const requiredFields = ["email", "password", "firstName", "lastName"];
+    const requiredFields = ["email", "password", "first_name", "last_name"];
     requiredFields.forEach((field) => {
       if (!credentials.hasOwnProperty(field)) {
         throw new BadRequestError(`Missing field: ${field} is required boody.`);
@@ -30,13 +32,19 @@ class User {
     if (existingUser) {
       throw new BadRequestError(`User already exists: ${existingUser.email}`);
     }
+
+    const hashedPassword = await bycrypt.hash(
+      credentials.password,
+      BYCRYPT_WORK_FACTOR
+    );
+
     const lowercasedEmail = credentials.email.toLowerCase();
     const result = await db.query(
       `INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
       `,
       [
         lowercasedEmail,
-        credentials.password,
+        hashedPassword,
         credentials.firstName,
         credentials.lastName,
       ]

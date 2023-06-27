@@ -88,3 +88,92 @@
 2023-06-27 11:51:58.287 PDT [54868] LOG:  database system is ready to accept connections
 2023-06-27 11:56:58.287 PDT [54869] LOG:  checkpoint starting: time
 2023-06-27 11:56:58.397 PDT [54869] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.104 s, sync=0.001 s, total=0.110 s; sync files=3, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=2 kB; lsn=0/3105F58, redo lsn=0/3105F20
+2023-06-27 14:23:50.787 PDT [12722] ERROR:  null value in column "location" of relation "users" violates not-null constraint
+2023-06-27 14:23:50.787 PDT [12722] DETAIL:  Failing row contains (1, supersecretpassword, Mera, Seas, mera@svaccine.com, null, 2023-06-27 14:23:50.783544).
+2023-06-27 14:23:50.787 PDT [12722] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:25:05.642 PDT [12722] ERROR:  null value in column "location" of relation "users" violates not-null constraint
+2023-06-27 14:25:05.642 PDT [12722] DETAIL:  Failing row contains (2, supersecretpassword, Mera, Seas, mera@svaccine.com, null, 2023-06-27 14:25:05.642745).
+2023-06-27 14:25:05.642 PDT [12722] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:28:21.147 PDT [54869] LOG:  checkpoint starting: time
+2023-06-27 14:28:21.362 PDT [54869] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.002 s, total=0.215 s; sync files=3, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=2 kB; lsn=0/3106218, redo lsn=0/31061E0
+2023-06-27 14:32:05.707 PDT [12722] ERROR:  null value in column "location" of relation "users" violates not-null constraint
+2023-06-27 14:32:05.707 PDT [12722] DETAIL:  Failing row contains (3, supersecretpassword, Mera, Seas, mera@svaccine.com, null, 2023-06-27 14:32:05.707089).
+2023-06-27 14:32:05.707 PDT [12722] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:33:21.369 PDT [54869] LOG:  checkpoint starting: time
+2023-06-27 14:33:21.476 PDT [54869] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.103 s, sync=0.001 s, total=0.107 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=1 kB; lsn=0/31063C8, redo lsn=0/3106390
+2023-06-27 14:34:35.181 PDT [12722] ERROR:  null value in column "location" of relation "users" violates not-null constraint
+2023-06-27 14:34:35.181 PDT [12722] DETAIL:  Failing row contains (4, supersecretpassword, Mera, Seas, mera@svaccine.com, null, 2023-06-27 14:34:35.181007).
+2023-06-27 14:34:35.181 PDT [12722] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:36:34.642 PDT [17755] ERROR:  null value in column "location" of relation "users" violates not-null constraint
+2023-06-27 14:36:34.642 PDT [17755] DETAIL:  Failing row contains (5, supersecretpassword, Mera, Seas, mera@svaccine.com, null, 2023-06-27 14:36:34.641832).
+2023-06-27 14:36:34.642 PDT [17755] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:37:16.342 PDT [17838] ERROR:  null value in column "first_name" of relation "users" violates not-null constraint
+2023-06-27 14:37:16.342 PDT [17838] DETAIL:  Failing row contains (6, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:37:16.341788).
+2023-06-27 14:37:16.342 PDT [17838] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:37:34.831 PDT [17838] ERROR:  null value in column "first_name" of relation "users" violates not-null constraint
+2023-06-27 14:37:34.831 PDT [17838] DETAIL:  Failing row contains (7, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:37:34.830822).
+2023-06-27 14:37:34.831 PDT [17838] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:37:55.163 PDT [18061] ERROR:  null value in column "first_name" of relation "users" violates not-null constraint
+2023-06-27 14:37:55.163 PDT [18061] DETAIL:  Failing row contains (8, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:37:55.16348).
+2023-06-27 14:37:55.163 PDT [18061] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:38:21.484 PDT [54869] LOG:  checkpoint starting: time
+2023-06-27 14:38:21.590 PDT [54869] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.001 s, total=0.107 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=1 kB; lsn=0/3106578, redo lsn=0/3106540
+2023-06-27 14:39:53.908 PDT [54868] LOG:  received fast shutdown request
+2023-06-27 14:39:53.909 PDT [54868] LOG:  aborting any active transactions
+2023-06-27 14:39:53.909 PDT [18181] FATAL:  terminating connection due to administrator command
+2023-06-27 14:39:53.909 PDT [18061] FATAL:  terminating connection due to administrator command
+2023-06-27 14:39:53.910 PDT [54868] LOG:  background worker "logical replication launcher" (PID 54874) exited with exit code 1
+2023-06-27 14:39:53.911 PDT [54869] LOG:  shutting down
+2023-06-27 14:39:53.912 PDT [54869] LOG:  checkpoint starting: shutdown immediate
+2023-06-27 14:39:53.915 PDT [54869] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.004 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=1 kB; lsn=0/3106628, redo lsn=0/3106628
+2023-06-27 14:39:53.919 PDT [54868] LOG:  database system is shut down
+2023-06-27 14:39:54.941 PDT [18214] LOG:  starting PostgreSQL 16beta1 on aarch64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit
+2023-06-27 14:39:54.942 PDT [18214] LOG:  listening on IPv6 address "::1", port 5432
+2023-06-27 14:39:54.943 PDT [18214] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-06-27 14:39:54.944 PDT [18214] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-06-27 14:39:54.949 PDT [18220] LOG:  database system was shut down at 2023-06-27 14:39:53 PDT
+2023-06-27 14:39:54.956 PDT [18214] LOG:  database system is ready to accept connections
+2023-06-27 14:40:12.217 PDT [18246] ERROR:  null value in column "first_name" of relation "users" violates not-null constraint
+2023-06-27 14:40:12.217 PDT [18246] DETAIL:  Failing row contains (9, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:40:12.216457).
+2023-06-27 14:40:12.217 PDT [18246] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:42:57.103 PDT [18454] ERROR:  syntax error at or near "c" at character 1
+2023-06-27 14:42:57.103 PDT [18454] STATEMENT:  c
+	SELECT * FROM users
+	;
+2023-06-27 14:43:57.916 PDT [18246] ERROR:  null value in column "first_name" of relation "users" violates not-null constraint
+2023-06-27 14:43:57.916 PDT [18246] DETAIL:  Failing row contains (10, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:43:57.916439).
+2023-06-27 14:43:57.916 PDT [18246] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:44:54.956 PDT [18217] LOG:  checkpoint starting: time
+2023-06-27 14:44:55.064 PDT [18217] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.104 s, sync=0.002 s, total=0.109 s; sync files=3, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/31067D8, redo lsn=0/31067A0
+2023-06-27 14:47:02.859 PDT [18246] ERROR:  null value in column "last_name" of relation "users" violates not-null constraint
+2023-06-27 14:47:02.859 PDT [18246] DETAIL:  Failing row contains (11, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:47:02.859524).
+2023-06-27 14:47:02.859 PDT [18246] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:47:26.433 PDT [18246] ERROR:  null value in column "location" of relation "users" violates not-null constraint
+2023-06-27 14:47:26.433 PDT [18246] DETAIL:  Failing row contains (12, supersecretpassword, null, null, mera@svaccine.com, null, 2023-06-27 14:47:26.433535).
+2023-06-27 14:47:26.433 PDT [18246] STATEMENT:  INSERT INTO users (email, password, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 14:49:54.996 PDT [18217] LOG:  checkpoint starting: time
+2023-06-27 14:49:55.710 PDT [18217] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.709 s, sync=0.003 s, total=0.715 s; sync files=6, longest=0.001 s, average=0.001 s; distance=9 kB, estimate=9 kB; lsn=0/3108F30, redo lsn=0/3108EF8
+2023-06-27 15:01:38.441 PDT [28097] ERROR:  column "lowercased_email" of relation "users" does not exist at character 20
+2023-06-27 15:01:38.441 PDT [28097] STATEMENT:  INSERT INTO users (lowercased_email, hashedPassword, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 15:02:37.851 PDT [30366] ERROR:  column "lowercaseemail" of relation "users" does not exist at character 20
+2023-06-27 15:02:37.851 PDT [30366] STATEMENT:  INSERT INTO users (lowercaseEmail, hashedPassword, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 15:03:26.046 PDT [30674] ERROR:  column "lowercasedemail" of relation "users" does not exist at character 20
+2023-06-27 15:03:26.046 PDT [30674] STATEMENT:  INSERT INTO users (lowercasedEmail, hashedPassword, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
+2023-06-27 15:03:59.738 PDT [30741] ERROR:  column "hashedpassword" of relation "users" does not exist at character 27
+2023-06-27 15:03:59.738 PDT [30741] STATEMENT:  INSERT INTO users (email, hashedPassword, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING *
+	      
